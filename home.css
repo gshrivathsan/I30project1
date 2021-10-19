@@ -82,6 +82,10 @@ section {
     z-index: 999;
 }
 
+.header.active {
+    background-color: var(--purple-solid);
+}
+
 /*Header styles-nav*/
 
 .nav {
@@ -255,49 +259,69 @@ section {
     background-color: #56247f;
 }
 
-/*Contact Section*/
-.contact-content {
-    display: flex;
-    justify-content: center;
-}
 
-.plane-wrap {
-    display: none;
-}
 
-.contact-form {
-    width: 100%;
-    background-color: var(--gradient-color);
-    padding: 2.5rem;
-}
+/*Footer Section*/
 
-.contact-form .input {
-    display: block;
-    background-color: transparent;
+.footer {
+    padding: 5rem 0;
+    background-color: var(--purple-solid);
     color: white;
-    font-weight: normal;
-    border-bottom: 2px solid white;
-    padding-left: 0;
 }
 
-.bar {
-    display: block;
-    position: relative;
+.footer-content-brand {
+    margin-bottom: 5rem;
 }
 
-.bar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--purple-light);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .5s;
+.footer .paragraph {
+    color: inherit;
 }
 
-.contact-form .input:focus+.bar::after {
-    transform: scaleX(1);
+.footer-heading {
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.social-media {
+    display: flex;
+}
+
+.sm-link {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    border: 2px solid var(--yellow-solid);
+    border-radius: 50%;
+    display: flex;
+    margin-right: 1rem;
+    transition: background-color .5s;
+}
+
+.sm-link:hover {
+    background-color: var(--yellow-solid);
+    color: var(--dark-color);
+}
+
+.sm-link i {
+    margin: auto;
+}
+
+/*Media*/
+
+@media screen and (min-width: 768px) {
+    /*Header Section*/
+
+    .header {
+        height: 10rem;
+    }
+
+    .header.active {
+        height: 6rem;
+    }
+
+    /*Hero Section*/
+    .title {
+        font-size: 8rem;
+    }
+
 }
