@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="hotel.ico">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap" rel="stylesheet">
+	<style>
+	
+	.head
+	{
+		text-align: center;
+		font-size: 3em;
+		font-family: 'Grechen Fuemen', cursive;;
+		font-weight: bold;
+		color: rgb(134, 28, 28);
+	}
+	</style>
+
+</head>
+<body>
+
+
+ <div class="container">
+	<h1 class="head">Stationary</h1>
+	<form id="loginform" onsubmit="login()" class="login-email">
+		<p class="login-text" style="font-size: 2rem; font-weight:800;">Login</p>
+
+		<small><span id="error" style="color: red;"></span></small>
+		<div class="input-group">
+			<input id="email"  type="email" placeholder="Email" name="email"  required>
+		</div>
+
+		<div class="input-group">
+			<input id="password" type="password" placeholder="Password" name="password"  required>
+		</div>
+
+		<div class="input-group">
+			<button  type="submit" class="subbtn" class="btn">Login</button>
+		</div>
+		<a href="#" onclick="forgotPass()">Forgot Password</a>
+		<br>
+		<br>
+		<p class="login-register-text">Don't have an account? <a href="signup.html">SignUp now</a></p>
+	</form>
+</div>
+
+
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+	<script src="js/firebase.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/logout.js"></script>
+
+
+</body>
+</html>
